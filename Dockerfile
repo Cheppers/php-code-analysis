@@ -30,7 +30,9 @@ RUN curl -o /usr/local/bin/composer https://getcomposer.org/composer.phar && \
     composer global require "squizlabs/php_codesniffer" && \
     ln -s /root/.composer/vendor/bin/phpcs /usr/local/bin/phpcs && \
     ln -s /root/.composer/vendor/bin/phpmd /usr/local/bin/phpmd && \
-    ln -s /root/.composer/vendor/bin/phpmetrics /usr/local/bin/phpmetrics
+    ln -s /root/.composer/vendor/bin/phpmetrics /usr/local/bin/phpmetrics && \
+    mkdir /project
 
+WORKDIR /project
 
 
