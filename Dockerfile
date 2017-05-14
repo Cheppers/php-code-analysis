@@ -31,6 +31,7 @@ RUN curl -o /usr/local/bin/composer https://getcomposer.org/composer.phar && \
     composer global require "squizlabs/php_codesniffer=2.*" && \
     composer global require "drupal/coder" && \
     ln -s /root/.composer/vendor/bin/phpcs /usr/local/bin/phpcs && \
+    ln -s /root/.composer/vendor/bin/phpcbf /usr/local/bin/phpcbf && \
     ln -s /root/.composer/vendor/bin/phpmd /usr/local/bin/phpmd && \
     ln -s /root/.composer/vendor/bin/phpmetrics /usr/local/bin/phpmetrics && \
     phpcs --config-set installed_paths ~/.composer/vendor/drupal/coder/coder_sniffer && \
