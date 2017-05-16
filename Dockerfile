@@ -37,7 +37,9 @@ RUN curl -o /usr/local/bin/composer https://getcomposer.org/composer.phar && \
     phpcs --config-set installed_paths ~/.composer/vendor/drupal/coder/coder_sniffer && \
     mkdir /project
 
-RUN phpcs -i
+COPY files/pathreplace.sh /pathreplace.sh
+RUN chmod +x /pathreplace.sh && \
+    phpcs -i
 
 WORKDIR /project
 
