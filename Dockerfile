@@ -33,6 +33,8 @@ RUN curl -o /usr/local/bin/composer https://getcomposer.org/composer.phar && \
     ln -s /root/.config/composer/vendor/bin/phpmd /usr/local/bin/phpmd && \
     ln -s /root/.config/composer/vendor/bin/phpmetrics /usr/local/bin/phpmetrics && \
     phpcs --config-set installed_paths ~/.composer/vendor/drupal/coder/coder_sniffer && \
+    curl -L -o /usr/local/bin/php-security-checker https://github.com/fabpot/local-php-security-checker/releases/download/v1.0.0/local-php-security-checker_1.0.0_linux_amd64 && \
+    chmod +x /usr/local/bin/php-security-checker && \
     mkdir /project
 
 COPY files/pathreplace.sh /pathreplace.sh
